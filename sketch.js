@@ -60,13 +60,13 @@ function setup() {
   button3 = createButton("Going UP1")
   button3.position(1270,100)
   button3.class("blowButton")
-  button3.mouseClicked(blow2)
+  button3.mouseClicked(blow)
   button3.size(70,70)
 
   button4 = createButton("Going LEFT1")
   button4.position(1270,180)
   button4.class("leftButton")
-  button4.mouseClicked(blow3)
+  button4.mouseClicked(blow1)
   button4.size(70,70)
 }
 
@@ -100,20 +100,20 @@ function draw()
 function blow() {
   
   Matter.Body.applyForce(box.body, {x:0, y:0}, {x:0, y:-0.01})
-
+ Matter.Body.applyForce(box1.body, {x:0, y:0}, {x:0, y:-0.01})
 }
 
 function blow1() {
   Matter.Body.applyForce(box.body, {x:0, y:0}, {x:-0.01, y: 0})
-  
+  Matter.Body.applyForce(box1.body, {x:0, y:0}, {x:-0.01, y:0})
 }
 
 function blow2() {
-  Matter.Body.applyForce(box1.body, {x:0, y:0}, {x:0, y:-0.01})
+ 
 
 }
 
 function blow3() {
-  Matter.Body.applyForce(box1.body, {x:0, y:0}, {x:-0.01, y:0})
+  
 
 }
